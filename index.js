@@ -23,11 +23,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/post/new', (req, res) => {
+    const data = {}
     res.render('show', {})
 })
 
 app.post('/post/new', (req, res) => {
+    const data = {}
     
+
     res.render('show', {})
 })
 
