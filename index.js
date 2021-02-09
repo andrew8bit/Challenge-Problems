@@ -23,15 +23,19 @@ app.get('/', (req, res) => {
 })
 
 app.get('/post/new', (req, res) => {
-    const data = {}
+    let data = req.body
     res.render('show', {})
 })
 
 app.post('/post/new', (req, res) => {
-    const data = {}
-    
+    let data = req.body
 
-    res.render('show', {})
+    res.render('results', {data})
+})
+
+app.get('/results', (req, res) => {
+
+    res.render('results', {data})
 })
 
 const PORT = process.env.PORT || 8000;
